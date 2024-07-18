@@ -394,7 +394,7 @@ const ComponentsDashboardAnalytics = () => {
                             <div className="mb-4">
                                 <h1>Compartment 1</h1>
                             </div>
-                            <div className="flex-wrap gap-2">
+                            <div className="flex flex-grow flex-wrap gap-2">
                                 <div className="w-full max-w-[30rem] rounded border border-white-light bg-white dark:border-[#1b2e4b] dark:bg-[#191e3a] dark:shadow-none">
                                     <div className="relative flex items-start p-3">
                                         {/* Image on the left */}
@@ -410,6 +410,80 @@ const ComponentsDashboardAnalytics = () => {
                                             <div className="gap-2">
                                                 {' '}
                                                 <button className="rounded-md bg-red-500 px-2 py-1 text-xs font-medium text-white">Sensor 1</button>
+                                                <button className="rounded-md bg-green-700 px-2 py-1 text-xs font-medium text-white">Calibrated</button>
+                                            </div>
+                                            <div className="absolute bottom-3 right-3">
+                                                <Tippy content="">
+                                                    <button type="button">
+                                                        <IconPencil className="text-green-700" />
+                                                    </button>
+                                                </Tippy>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="mx-3 mb-2 flex items-center justify-between font-semibold">
+                                        <div className="flex items-center">
+                                            <IconSquareCheck className="h-4 w-4 text-success" />
+                                            <div className="text-xs ltr:ml-2 rtl:mr-2">45/50</div>
+                                        </div>
+                                        <p className="text-primary">90%</p>
+                                    </div>
+                                    <div className="mx-3 mb-3 h-2.5 rounded-full bg-dark-light p-0.5 dark:bg-dark-light/10">
+                                        <div className="h-full rounded-full bg-gradient-to-r from-[#55c965] to-[#00a724]" style={{ width: '90%' }}></div>
+                                    </div>
+                                </div>
+                                <div className="w-full max-w-[30rem] rounded border border-white-light bg-white dark:border-[#1b2e4b] dark:bg-[#191e3a] dark:shadow-none">
+                                    <div className="relative flex items-start p-3">
+                                        {/* Image on the left */}
+                                        <div className="mb-5 mr-4 h-20 w-20 overflow-hidden rounded border sm:mb-0">
+                                            <img src="/assets/images/gloves.png" alt="profile" className="h-full w-full object-cover" />
+                                        </div>
+
+                                        {/* Content on the right */}
+                                        <div className="flex flex-grow flex-col">
+                                            {' '}
+                                            <h5 className="mb-1 text-[15px] font-semibold text-[#3b3f5c] dark:text-white-light">Medical Gloves</h5>
+                                            <p className="mb-3 text-white-dark">Metasys</p>
+                                            <div className="gap-2">
+                                                {' '}
+                                                <button className="rounded-md bg-red-500 px-2 py-1 text-xs font-medium text-white">Sensor 2</button>
+                                                <button className="rounded-md bg-green-700 px-2 py-1 text-xs font-medium text-white">Calibrated</button>
+                                            </div>
+                                            <div className="absolute bottom-3 right-3">
+                                                <Tippy content="">
+                                                    <button type="button">
+                                                        <IconPencil className="text-green-700" />
+                                                    </button>
+                                                </Tippy>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="mx-3 mb-2 flex items-center justify-between font-semibold">
+                                        <div className="flex items-center">
+                                            <IconSquareCheck className="h-4 w-4 text-success" />
+                                            <div className="text-xs ltr:ml-2 rtl:mr-2">2/10</div>
+                                        </div>
+                                        <p className="text-primary">20%</p>
+                                    </div>
+                                    <div className="mx-3 mb-3 h-2.5 rounded-full bg-dark-light p-0.5 dark:bg-dark-light/10">
+                                        <div className="h-full rounded-full bg-gradient-to-r from-[#ff6060] to-[#f795a2]" style={{ width: '20%' }}></div>
+                                    </div>
+                                </div>
+                                <div className="w-full max-w-[30rem] rounded border border-white-light bg-white dark:border-[#1b2e4b] dark:bg-[#191e3a] dark:shadow-none">
+                                    <div className="relative flex items-start p-3">
+                                        {/* Image on the left */}
+                                        <div className="mb-5 mr-4 h-20 w-20 overflow-hidden rounded border sm:mb-0">
+                                            <img src="/assets/images/gloves.png" alt="profile" className="h-full w-full object-cover" />
+                                        </div>
+
+                                        {/* Content on the right */}
+                                        <div className="flex flex-grow flex-col">
+                                            {' '}
+                                            <h5 className="mb-1 text-[15px] font-semibold text-[#3b3f5c] dark:text-white-light">Medical Gloves</h5>
+                                            <p className="mb-3 text-white-dark">Metasys</p>
+                                            <div className="gap-2">
+                                                {' '}
+                                                <button className="rounded-md bg-red-500 px-2 py-1 text-xs font-medium text-white">Sensor 3</button>
                                                 <button className="rounded-md bg-green-700 px-2 py-1 text-xs font-medium text-white">Calibrated</button>
                                             </div>
                                             <div className="absolute bottom-3 right-3">
@@ -446,81 +520,7 @@ const ComponentsDashboardAnalytics = () => {
                                             <p className="mb-3 text-white-dark">Metasys</p>
                                             <div className="gap-2">
                                                 {' '}
-                                                <button className="rounded-md bg-red-500 px-2 py-1 text-xs font-medium text-white">Sensor 1</button>
-                                                <button className="rounded-md bg-green-700 px-2 py-1 text-xs font-medium text-white">Calibrated</button>
-                                            </div>
-                                            <div className="absolute bottom-3 right-3">
-                                                <Tippy content="">
-                                                    <button type="button">
-                                                        <IconPencil className="text-green-700" />
-                                                    </button>
-                                                </Tippy>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="mx-3 mb-2 flex items-center justify-between font-semibold">
-                                        <div className="flex items-center">
-                                            <IconSquareCheck className="h-4 w-4 text-success" />
-                                            <div className="text-xs ltr:ml-2 rtl:mr-2">30/50</div>
-                                        </div>
-                                        <p className="text-primary">65%</p>
-                                    </div>
-                                    <div className="mx-3 mb-3 h-2.5 rounded-full bg-dark-light p-0.5 dark:bg-dark-light/10">
-                                        <div className="h-full rounded-full bg-gradient-to-r from-[#ff6060] to-[#f795a2]" style={{ width: '65%' }}></div>
-                                    </div>
-                                </div>
-                                <div className="w-full max-w-[30rem] rounded border border-white-light bg-white dark:border-[#1b2e4b] dark:bg-[#191e3a] dark:shadow-none">
-                                    <div className="relative flex items-start p-3">
-                                        {/* Image on the left */}
-                                        <div className="mb-5 mr-4 h-20 w-20 overflow-hidden rounded border sm:mb-0">
-                                            <img src="/assets/images/gloves.png" alt="profile" className="h-full w-full object-cover" />
-                                        </div>
-
-                                        {/* Content on the right */}
-                                        <div className="flex flex-grow flex-col">
-                                            {' '}
-                                            <h5 className="mb-1 text-[15px] font-semibold text-[#3b3f5c] dark:text-white-light">Medical Gloves</h5>
-                                            <p className="mb-3 text-white-dark">Metasys</p>
-                                            <div className="gap-2">
-                                                {' '}
-                                                <button className="rounded-md bg-red-500 px-2 py-1 text-xs font-medium text-white">Sensor 1</button>
-                                                <button className="rounded-md bg-green-700 px-2 py-1 text-xs font-medium text-white">Calibrated</button>
-                                            </div>
-                                            <div className="absolute bottom-3 right-3">
-                                                <Tippy content="">
-                                                    <button type="button">
-                                                        <IconPencil className="text-green-700" />
-                                                    </button>
-                                                </Tippy>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="mx-3 mb-2 flex items-center justify-between font-semibold">
-                                        <div className="flex items-center">
-                                            <IconSquareCheck className="h-4 w-4 text-success" />
-                                            <div className="text-xs ltr:ml-2 rtl:mr-2">30/50</div>
-                                        </div>
-                                        <p className="text-primary">65%</p>
-                                    </div>
-                                    <div className="mx-3 mb-3 h-2.5 rounded-full bg-dark-light p-0.5 dark:bg-dark-light/10">
-                                        <div className="h-full rounded-full bg-gradient-to-r from-[#ff6060] to-[#f795a2]" style={{ width: '65%' }}></div>
-                                    </div>
-                                </div>
-                                <div className="w-full max-w-[30rem] rounded border border-white-light bg-white dark:border-[#1b2e4b] dark:bg-[#191e3a] dark:shadow-none">
-                                    <div className="relative flex items-start p-3">
-                                        {/* Image on the left */}
-                                        <div className="mb-5 mr-4 h-20 w-20 overflow-hidden rounded border sm:mb-0">
-                                            <img src="/assets/images/gloves.png" alt="profile" className="h-full w-full object-cover" />
-                                        </div>
-
-                                        {/* Content on the right */}
-                                        <div className="flex flex-grow flex-col">
-                                            {' '}
-                                            <h5 className="mb-1 text-[15px] font-semibold text-[#3b3f5c] dark:text-white-light">Medical Gloves</h5>
-                                            <p className="mb-3 text-white-dark">Metasys</p>
-                                            <div className="gap-2">
-                                                {' '}
-                                                <button className="rounded-md bg-red-500 px-2 py-1 text-xs font-medium text-white">Sensor 1</button>
+                                                <button className="rounded-md bg-red-500 px-2 py-1 text-xs font-medium text-white">Sensor 4</button>
                                                 <button className="rounded-md bg-green-700 px-2 py-1 text-xs font-medium text-white">Calibrated</button>
                                             </div>
                                             <div className="absolute bottom-3 right-3">
@@ -545,7 +545,161 @@ const ComponentsDashboardAnalytics = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="mb-5 text-white-dark">Doloribus nisi vel suscipit modi, optio ex repudiandae voluptatibus officiis commodi. Nesciunt quas aut neque incidunt!</div>
+                        <div className="mb-2 mt-8 flex-col items-center justify-center">
+                            <div className="mb-4">
+                                <h1>Compartment 2</h1>
+                            </div>
+                            <div className="flex flex-grow flex-wrap gap-2">
+                                <div className="w-full max-w-[30rem] rounded border border-white-light bg-white dark:border-[#1b2e4b] dark:bg-[#191e3a] dark:shadow-none">
+                                    <div className="relative flex items-start p-3">
+                                        {/* Image on the left */}
+                                        <div className="mb-5 mr-4 h-20 w-20 overflow-hidden rounded border sm:mb-0">
+                                            <img src="/assets/images/gloves.png" alt="profile" className="h-full w-full object-cover" />
+                                        </div>
+
+                                        {/* Content on the right */}
+                                        <div className="flex flex-grow flex-col">
+                                            {' '}
+                                            <h5 className="mb-1 text-[15px] font-semibold text-[#3b3f5c] dark:text-white-light">Medical Gloves</h5>
+                                            <p className="mb-3 text-white-dark">Metasys</p>
+                                            <div className="gap-2">
+                                                {' '}
+                                                <button className="rounded-md bg-red-500 px-2 py-1 text-xs font-medium text-white">Sensor 5</button>
+                                                <button className="rounded-md bg-green-700 px-2 py-1 text-xs font-medium text-white">Calibrated</button>
+                                            </div>
+                                            <div className="absolute bottom-3 right-3">
+                                                <Tippy content="">
+                                                    <button type="button">
+                                                        <IconPencil className="text-green-700" />
+                                                    </button>
+                                                </Tippy>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="mx-3 mb-2 flex items-center justify-between font-semibold">
+                                        <div className="flex items-center">
+                                            <IconSquareCheck className="h-4 w-4 text-success" />
+                                            <div className="text-xs ltr:ml-2 rtl:mr-2">30/50</div>
+                                        </div>
+                                        <p className="text-primary">65%</p>
+                                    </div>
+                                    <div className="mx-3 mb-3 h-2.5 rounded-full bg-dark-light p-0.5 dark:bg-dark-light/10">
+                                        <div className="h-full rounded-full bg-gradient-to-r from-[#ff6060] to-[#f795a2]" style={{ width: '65%' }}></div>
+                                    </div>
+                                </div>
+                                <div className="w-full max-w-[30rem] rounded border border-white-light bg-white dark:border-[#1b2e4b] dark:bg-[#191e3a] dark:shadow-none">
+                                    <div className="relative flex items-start p-3">
+                                        {/* Image on the left */}
+                                        <div className="mb-5 mr-4 h-20 w-20 overflow-hidden rounded border sm:mb-0">
+                                            <img src="/assets/images/gloves.png" alt="profile" className="h-full w-full object-cover" />
+                                        </div>
+
+                                        {/* Content on the right */}
+                                        <div className="flex flex-grow flex-col">
+                                            {' '}
+                                            <h5 className="mb-1 text-[15px] font-semibold text-[#3b3f5c] dark:text-white-light">Medical Gloves</h5>
+                                            <p className="mb-3 text-white-dark">Metasys</p>
+                                            <div className="gap-2">
+                                                {' '}
+                                                <button className="rounded-md bg-red-500 px-2 py-1 text-xs font-medium text-white">Sensor 6</button>
+                                                <button className="rounded-md bg-green-700 px-2 py-1 text-xs font-medium text-white">Calibrated</button>
+                                            </div>
+                                            <div className="absolute bottom-3 right-3">
+                                                <Tippy content="">
+                                                    <button type="button">
+                                                        <IconPencil className="text-green-700" />
+                                                    </button>
+                                                </Tippy>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="mx-3 mb-2 flex items-center justify-between font-semibold">
+                                        <div className="flex items-center">
+                                            <IconSquareCheck className="h-4 w-4 text-success" />
+                                            <div className="text-xs ltr:ml-2 rtl:mr-2">30/50</div>
+                                        </div>
+                                        <p className="text-primary">65%</p>
+                                    </div>
+                                    <div className="mx-3 mb-3 h-2.5 rounded-full bg-dark-light p-0.5 dark:bg-dark-light/10">
+                                        <div className="h-full rounded-full bg-gradient-to-r from-[#ff6060] to-[#f795a2]" style={{ width: '65%' }}></div>
+                                    </div>
+                                </div>
+                                <div className="w-full max-w-[30rem] rounded border border-white-light bg-white dark:border-[#1b2e4b] dark:bg-[#191e3a] dark:shadow-none">
+                                    <div className="relative flex items-start p-3">
+                                        {/* Image on the left */}
+                                        <div className="mb-5 mr-4 h-20 w-20 overflow-hidden rounded border sm:mb-0">
+                                            <img src="/assets/images/gloves.png" alt="profile" className="h-full w-full object-cover" />
+                                        </div>
+
+                                        {/* Content on the right */}
+                                        <div className="flex flex-grow flex-col">
+                                            {' '}
+                                            <h5 className="mb-1 text-[15px] font-semibold text-[#3b3f5c] dark:text-white-light">Medical Gloves</h5>
+                                            <p className="mb-3 text-white-dark">Metasys</p>
+                                            <div className="gap-2">
+                                                {' '}
+                                                <button className="rounded-md bg-red-500 px-2 py-1 text-xs font-medium text-white">Sensor 7</button>
+                                                <button className="rounded-md bg-green-700 px-2 py-1 text-xs font-medium text-white">Calibrated</button>
+                                            </div>
+                                            <div className="absolute bottom-3 right-3">
+                                                <Tippy content="">
+                                                    <button type="button">
+                                                        <IconPencil className="text-green-700" />
+                                                    </button>
+                                                </Tippy>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="mx-3 mb-2 flex items-center justify-between font-semibold">
+                                        <div className="flex items-center">
+                                            <IconSquareCheck className="h-4 w-4 text-success" />
+                                            <div className="text-xs ltr:ml-2 rtl:mr-2">30/50</div>
+                                        </div>
+                                        <p className="text-primary">65%</p>
+                                    </div>
+                                    <div className="mx-3 mb-3 h-2.5 rounded-full bg-dark-light p-0.5 dark:bg-dark-light/10">
+                                        <div className="h-full rounded-full bg-gradient-to-r from-[#ff6060] to-[#f795a2]" style={{ width: '65%' }}></div>
+                                    </div>
+                                </div>
+                                <div className="w-full max-w-[30rem] rounded border border-white-light bg-white dark:border-[#1b2e4b] dark:bg-[#191e3a] dark:shadow-none">
+                                    <div className="relative flex items-start p-3">
+                                        {/* Image on the left */}
+                                        <div className="mb-5 mr-4 h-20 w-20 overflow-hidden rounded border sm:mb-0">
+                                            <img src="/assets/images/gloves.png" alt="profile" className="h-full w-full object-cover" />
+                                        </div>
+
+                                        {/* Content on the right */}
+                                        <div className="flex flex-grow flex-col">
+                                            {' '}
+                                            <h5 className="mb-1 text-[15px] font-semibold text-[#3b3f5c] dark:text-white-light">Medical Gloves</h5>
+                                            <p className="mb-3 text-white-dark">Metasys</p>
+                                            <div className="gap-2">
+                                                {' '}
+                                                <button className="rounded-md bg-red-500 px-2 py-1 text-xs font-medium text-white">Sensor 8</button>
+                                                <button className="rounded-md bg-green-700 px-2 py-1 text-xs font-medium text-white">Calibrated</button>
+                                            </div>
+                                            <div className="absolute bottom-3 right-3">
+                                                <Tippy content="">
+                                                    <button type="button">
+                                                        <IconPencil className="text-green-700" />
+                                                    </button>
+                                                </Tippy>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="mx-3 mb-2 flex items-center justify-between font-semibold">
+                                        <div className="flex items-center">
+                                            <IconSquareCheck className="h-4 w-4 text-success" />
+                                            <div className="text-xs ltr:ml-2 rtl:mr-2">30/50</div>
+                                        </div>
+                                        <p className="text-primary">65%</p>
+                                    </div>
+                                    <div className="mx-3 mb-3 h-2.5 rounded-full bg-dark-light p-0.5 dark:bg-dark-light/10">
+                                        <div className="h-full rounded-full bg-gradient-to-r from-[#ff6060] to-[#f795a2]" style={{ width: '65%' }}></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
