@@ -1,3 +1,4 @@
+'use client';
 import ContentAnimation from '@/components/layouts/content-animation';
 import Footer from '@/components/layouts/footer';
 import Header from '@/components/layouts/header';
@@ -7,8 +8,16 @@ import ScrollToTop from '@/components/layouts/scroll-to-top';
 import Setting from '@/components/layouts/setting';
 import Sidebar from '@/components/layouts/sidebar';
 import Portals from '@/components/portals';
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { toggleLayout } from '@/store/themeConfigSlice';
 
 export default function DefaultLayout({ children }: { children: React.ReactNode }) {
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(toggleLayout('boxed-layout'));
+    }, [dispatch]);
     return (
         <>
             {/* BEGIN MAIN CONTAINER */}

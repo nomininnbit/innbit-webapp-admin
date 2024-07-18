@@ -83,59 +83,25 @@ const Header = () => {
     function createMarkup(messages: any) {
         return { __html: messages };
     }
-    const [messages, setMessages] = useState([
-        {
-            id: 1,
-            image: '<span class="grid place-content-center w-9 h-9 rounded-full bg-success-light dark:bg-success text-success dark:text-success-light"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></span>',
-            title: 'Congratulations!',
-            message: 'Your OS has been updated.',
-            time: '1hr',
-        },
-        {
-            id: 2,
-            image: '<span class="grid place-content-center w-9 h-9 rounded-full bg-info-light dark:bg-info text-info dark:text-info-light"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg></span>',
-            title: 'Did you know?',
-            message: 'You can switch between artboards.',
-            time: '2hr',
-        },
-        {
-            id: 3,
-            image: '<span class="grid place-content-center w-9 h-9 rounded-full bg-danger-light dark:bg-danger text-danger dark:text-danger-light"> <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></span>',
-            title: 'Something went wrong!',
-            message: 'Send Reposrt',
-            time: '2days',
-        },
-        {
-            id: 4,
-            image: '<span class="grid place-content-center w-9 h-9 rounded-full bg-warning-light dark:bg-warning text-warning dark:text-warning-light"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">    <circle cx="12" cy="12" r="10"></circle>    <line x1="12" y1="8" x2="12" y2="12"></line>    <line x1="12" y1="16" x2="12.01" y2="16"></line></svg></span>',
-            title: 'Warning',
-            message: 'Your password strength is low.',
-            time: '5days',
-        },
-    ]);
-
-    const removeMessage = (value: number) => {
-        setMessages(messages.filter((user) => user.id !== value));
-    };
 
     const [notifications, setNotifications] = useState([
         {
             id: 1,
             profile: 'user-profile.jpeg',
-            message: '<strong class="text-sm mr-1">John Doe</strong>invite you to <strong>Prototyping</strong>',
+            message: '<strong class="text-sm mr-1">John Doe</strong>added new box <strong>boxName</strong>',
             time: '45 min ago',
         },
         {
             id: 2,
             profile: 'profile-34.jpeg',
-            message: '<strong class="text-sm mr-1">Adam Nolan</strong>mentioned you to <strong>UX Basics</strong>',
+            message: '<strong class="text-sm mr-1">Erike Musterfrau</strong>added new box <strong>boxName</strong>',
             time: '9h Ago',
         },
         {
             id: 3,
             profile: 'profile-16.jpeg',
-            message: '<strong class="text-sm mr-1">Anna Morgan</strong>Upload a file',
-            time: '9h Ago',
+            message: '<strong class="text-sm mr-1">Anna Morgan</strong>added new box',
+            time: '12h Ago',
         },
     ]);
 
@@ -152,7 +118,7 @@ const Header = () => {
                     <div className="horizontal-logo flex items-center justify-between lg:hidden ltr:mr-2 rtl:ml-2">
                         <Link href="/" className="main-logo flex shrink-0 items-center">
                             <img className="inline w-8 ltr:-ml-1 rtl:-mr-1" src="/assets/images/logo.svg" alt="logo" />
-                            <span className="hidden align-middle text-2xl  font-semibold  transition-all duration-300 dark:text-white-light md:inline ltr:ml-1.5 rtl:mr-1.5">VRISTO</span>
+                            <span className="hidden align-middle text-2xl  font-semibold  transition-all duration-300 dark:text-white-light md:inline ltr:ml-1.5 rtl:mr-1.5">Innbit</span>
                         </Link>
                         <button
                             type="button"
@@ -165,33 +131,7 @@ const Header = () => {
 
                     <div className="hidden sm:block ltr:mr-2 rtl:ml-2"></div>
                     <div className="flex items-center space-x-1.5 dark:text-[#d0d2d6] sm:flex-1 lg:space-x-2 ltr:ml-auto ltr:sm:ml-0 rtl:mr-auto rtl:space-x-reverse sm:rtl:mr-0">
-                        <div className="sm:ltr:mr-auto sm:rtl:ml-auto">
-                            <form
-                                className={`${search && '!block'} absolute inset-x-0 top-1/2 z-10 mx-4 hidden -translate-y-1/2 sm:relative sm:top-0 sm:mx-0 sm:block sm:translate-y-0`}
-                                onSubmit={() => setSearch(false)}
-                            >
-                                <div className="relative">
-                                    <input
-                                        type="text"
-                                        className="peer form-input bg-gray-100 placeholder:tracking-widest sm:bg-transparent ltr:pl-9 ltr:pr-9 ltr:sm:pr-4 rtl:pl-9 rtl:pr-9 rtl:sm:pl-4"
-                                        placeholder="Search..."
-                                    />
-                                    <button type="button" className="absolute inset-0 h-9 w-9 appearance-none peer-focus:text-primary ltr:right-auto rtl:left-auto">
-                                        <IconSearch className="mx-auto" />
-                                    </button>
-                                    <button type="button" className="absolute top-1/2 block -translate-y-1/2 hover:opacity-80 sm:hidden ltr:right-2 rtl:left-2" onClick={() => setSearch(false)}>
-                                        <IconXCircle />
-                                    </button>
-                                </div>
-                            </form>
-                            <button
-                                type="button"
-                                onClick={() => setSearch(!search)}
-                                className="search_btn rounded-full bg-white-light/40 p-2 hover:bg-white-light/90 dark:bg-dark/40 dark:hover:bg-dark/60 sm:hidden"
-                            >
-                                <IconSearch className="mx-auto h-4.5 w-4.5 dark:text-[#d0d2d6]" />
-                            </button>
-                        </div>
+                        <div className="sm:ltr:mr-auto sm:rtl:ml-auto"></div>
                         <div>
                             {themeConfig.theme === 'light' ? (
                                 <button
@@ -267,7 +207,6 @@ const Header = () => {
                                     <span>
                                         <IconBellBing />
                                         <span className="absolute top-0 flex h-3 w-3 ltr:right-0 rtl:left-0">
-                                            <span className="absolute -top-[3px] inline-flex h-full w-full animate-ping rounded-full bg-success/50 opacity-75 ltr:-left-[3px] rtl:-right-[3px]"></span>
                                             <span className="relative inline-flex h-[6px] w-[6px] rounded-full bg-success"></span>
                                         </span>
                                     </span>
@@ -344,10 +283,7 @@ const Header = () => {
                                         <div className="flex items-center px-4 py-4">
                                             <img className="h-10 w-10 rounded-md object-cover" src="/assets/images/user-profile.jpeg" alt="userProfile" />
                                             <div className="truncate ltr:pl-4 rtl:pr-4">
-                                                <h4 className="text-base">
-                                                    John Doe
-                                                    <span className="rounded bg-success-light px-1 text-xs text-success ltr:ml-2 rtl:ml-2">Pro</span>
-                                                </h4>
+                                                <h4 className="text-base">John Doe</h4>
                                                 <button type="button" className="text-black/60 hover:text-primary dark:text-dark-light/60 dark:hover:text-white">
                                                     johndoe@gmail.com
                                                 </button>
@@ -360,18 +296,7 @@ const Header = () => {
                                             Profile
                                         </Link>
                                     </li>
-                                    <li>
-                                        <Link href="/apps/mailbox" className="dark:hover:text-white">
-                                            <IconMail className="h-4.5 w-4.5 shrink-0 ltr:mr-2 rtl:ml-2" />
-                                            Inbox
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/auth/boxed-lockscreen" className="dark:hover:text-white">
-                                            <IconLockDots className="h-4.5 w-4.5 shrink-0 ltr:mr-2 rtl:ml-2" />
-                                            Lock Screen
-                                        </Link>
-                                    </li>
+
                                     <li className="border-t border-white-light dark:border-white-light/10">
                                         <Link href="/auth/boxed-signin" className="!py-3 text-danger">
                                             <IconLogout className="h-4.5 w-4.5 shrink-0 rotate-90 ltr:mr-2 rtl:ml-2" />
@@ -895,7 +820,7 @@ const Header = () => {
                                 <Link href="/widgets">{t('widgets')}</Link>
                             </li>
                             <li>
-                                <Link href="https://vristo.sbthemes.com" target="_blank">
+                                <Link href="https://Innbit.sbthemes.com" target="_blank">
                                     {t('documentation')}
                                 </Link>
                             </li>

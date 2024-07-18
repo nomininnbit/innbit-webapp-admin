@@ -95,25 +95,25 @@ const Sidebar = () => {
                     </div>
                     <PerfectScrollbar className="relative h-[calc(100vh-80px)]">
                         <ul className="relative mt-5 space-y-0.5 p-4 py-0 font-semibold">
-                            <li className="menu nav-item">
-                                <button type="button" className={`${currentMenu === 'dashboard' ? 'active' : ''} nav-link group w-full`} onClick={() => toggleMenu('dashboard')}>
+                            <li className="nav-item">
+                                <Link href="/">
                                     <div className="flex items-center">
                                         <IconMenuDashboard className="shrink-0 group-hover:!text-primary" />
-                                        <span className="text-black dark:text-white dark:group-hover:text-white-dark ltr:pl-3 rtl:pr-3">{t('dashboard')}</span>
+                                        <span className="text-black dark:text-white dark:group-hover:text-white-dark ltr:pl-3 rtl:pr-3">{t('Dashboard')}</span>
                                     </div>
-                                </button>
+                                </Link>
                             </li>
-                            <li className="menu nav-item">
-                                <button type="button" className={`${currentMenu === 'users' ? 'active' : ''} nav-link group w-full`} onClick={() => toggleMenu('users')}>
+                            <li className="nav-item">
+                                <Link href="/users">
                                     <div className="flex items-center">
                                         <IconMenuUsers className="shrink-0 group-hover:!text-primary" />
-                                        <span className="text-black dark:text-white dark:group-hover:text-white-dark ltr:pl-3 rtl:pr-3">{t('users')}</span>
+                                        <span className="text-black dark:text-white dark:group-hover:text-white-dark ltr:pl-3 rtl:pr-3">{t('Users')}</span>
                                     </div>
-                                </button>
+                                </Link>
                             </li>
 
                             <li className="nav-item">
-                                <Link href="/apps/customers" className="group">
+                                <Link href="/customers">
                                     <div className="flex items-center">
                                         <IconMenuContacts className="shrink-0 group-hover:!text-primary" />
                                         <span className="text-black dark:text-white dark:group-hover:text-white-dark ltr:pl-3 rtl:pr-3">{t('Customers')}</span>
@@ -121,17 +121,17 @@ const Sidebar = () => {
                                 </Link>
                             </li>
 
-                            <li className="menu nav-item">
-                                <button type="button" className={`${currentMenu === 'invoice' ? 'active' : ''} nav-link group w-full`} onClick={() => toggleMenu('Products')}>
+                            <li className="nav-item">
+                                <Link href="/products">
                                     <div className="flex items-center">
                                         <IconMenuInvoice className="shrink-0 group-hover:!text-primary" />
                                         <span className="text-black dark:text-white dark:group-hover:text-white-dark ltr:pl-3 rtl:pr-3">{t('Products')}</span>
                                     </div>
-                                </button>
+                                </Link>
                             </li>
 
-                            <li className="menu nav-item">
-                                <Link href="/boxes" className="group">
+                            <li className="nav-item">
+                                <Link href="/boxes">
                                     <div className="flex items-center">
                                         <IconMenuWidgets className="shrink-0 group-hover:!text-primary" />
                                         <span className="text-black dark:text-white dark:group-hover:text-white-dark ltr:pl-3 rtl:pr-3">{t('Boxes')}</span>
@@ -139,24 +139,26 @@ const Sidebar = () => {
                                 </Link>
                             </li>
 
-                            <li className="menu nav-item">
-                                <button type="button" className={`${currentMenu === 'Retailers' ? 'active' : ''} nav-link group w-full`} onClick={() => toggleMenu('Retailers')}>
+                            <li className="nav-item">
+                                <Link href="/retailers">
                                     <div className="flex items-center">
                                         <IconMenuDatatables className="shrink-0 group-hover:!text-primary" />
                                         <span className="text-black dark:text-white dark:group-hover:text-white-dark ltr:pl-3 rtl:pr-3">{t('Retailers')}</span>
                                     </div>
-                                </button>
+                                </Link>
                             </li>
+
                             <li className="nav-item">
-                                <Link href="/apps/settings" className="group">
+                                <Link href="/settings">
                                     <div className="flex items-center">
                                         <IconMenuScrumboard className="shrink-0 group-hover:!text-primary" />
                                         <span className="text-black dark:text-white dark:group-hover:text-white-dark ltr:pl-3 rtl:pr-3">{t('Settings')}</span>
                                     </div>
                                 </Link>
                             </li>
+
                             <li className="nav-item">
-                                <Link href="/apps/support" className="group">
+                                <Link href="/support">
                                     <div className="flex items-center">
                                         <IconMenuChat className="shrink-0 group-hover:!text-primary" />
                                         <span className="text-black dark:text-white dark:group-hover:text-white-dark ltr:pl-3 rtl:pr-3">{t('Support')}</span>

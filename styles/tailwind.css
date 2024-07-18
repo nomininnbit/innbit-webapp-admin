@@ -8,6 +8,7 @@
 @layer components {
     html {
         @apply scroll-smooth;
+        @apply mx-auto max-w-[1400px]
     }
 
     body {
@@ -83,7 +84,7 @@ hover:text-primary hover:before:!bg-primary dark:before:bg-gray-500 dark:hover:b
         @apply hidden shadow-md lg:flex;
     }
     .horizontal .horizontal-logo {
-        @apply flex;
+        @apply mx-auto max-w-[1400px]
     }
     .horizontal .main-container .main-content {
         @apply ltr:ml-0 rtl:mr-0;
@@ -137,7 +138,7 @@ hover:text-primary hover:before:!bg-primary dark:before:bg-gray-500 dark:hover:b
     /* Vertical layouts */
     .vertical.toggle-sidebar .horizontal-logo,
     .vertical.toggle-sidebar .collapse-icon {
-        @apply flex;
+        @apply mx-auto max-w-[1400px]
     }
     .vertical.toggle-sidebar .main-container .main-content {
         @apply ltr:ml-0 rtl:mr-0;
