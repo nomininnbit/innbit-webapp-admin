@@ -90,7 +90,7 @@ const Sidebar = () => {
                 <div className="h-full bg-white dark:bg-black">
                     <div className="flex items-center justify-between px-4 py-8">
                         <Link href="/" className="main-logo flex items-center">
-                            <img className="flex-none" src="/assets/images/innbitLogo.svg" alt="logo" />
+                            <img className="flex-none" src="/assets/images/innbitLogo.png" alt="logo" />
                         </Link>
                     </div>
                     <PerfectScrollbar className="relative h-[calc(100vh-80px)]">
